@@ -363,8 +363,8 @@ def coefficients_linear_split(coefficients, entropy):
   if random.choice([False, True]):
     a, b = b, a
 
-  coefficients_1 = np.zeros(coefficients.shape, dtype=np.object)
-  coefficients_2 = np.zeros(coefficients.shape, dtype=np.object)
+  coefficients_1 = np.zeros(coefficients.shape, dtype=object)
+  coefficients_2 = np.zeros(coefficients.shape, dtype=object)
 
   for index, coefficient in enumerate(coefficients):
     entropy_coeff = entropy_coefficients[index]
