@@ -238,7 +238,7 @@ def expand_coefficients(coefficients, entropy, length=None):
   coefficients = np.asarray(coefficients)
   shape = coefficients.shape
 
-  expanded_coefficients = np.empty(shape, dtype=np.object)
+  expanded_coefficients = np.empty(shape, dtype=object)
 
   min_length = np.count_nonzero(coefficients) + 2
   if length is None:
