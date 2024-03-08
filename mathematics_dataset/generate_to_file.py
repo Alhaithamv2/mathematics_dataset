@@ -47,6 +47,7 @@ from six.moves import range
 FLAGS = flags.FLAGS
 
 flags.DEFINE_string('output_dir', None, 'Where to write output text')
+flags.DEFINE_string('interjection', '\n', 'Intermediate line')
 flags.DEFINE_boolean('train_split', True,
                      'Whether to split training data by difficulty')
 flags.mark_flag_as_required('output_dir')
@@ -70,7 +71,8 @@ def main(unused_argv):
       with open(path, 'w') as text_file:
         for _ in range(per_module):
           problem, _ = generate.sample_from_module(module)
-          text_file.write(str(problem.question) + '\n')
+          text_file.write(str(problem.question))
+          text_file.write(FLAGS.interjection)
           text_file.write(str(problem.answer) + '\n')
       logging.info('Written %s', path)
 
