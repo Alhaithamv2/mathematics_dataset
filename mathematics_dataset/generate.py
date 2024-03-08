@@ -75,7 +75,7 @@ def _filter_and_flatten(modules_):
       if isinstance(module_or_function, dict):
         add(module_or_function, full_name)
       else:
-        if FLAGS.filter not in full_name:
+        if all([f not in full_name for f in FLAGS.filter.split(" ")]):
           continue
         flat[full_name] = module_or_function
 
