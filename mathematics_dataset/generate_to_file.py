@@ -73,7 +73,7 @@ def main(unused_argv):
           problem, _ = generate.sample_from_module(module)
           text_file.write(str(problem.question))
           text_file.write(FLAGS.interjection)
-          text_file.write(str(problem.answer) + '\n')
+          text_file.write(str(problem.answer) + '\n\n')
       logging.info('Written %s', path)
 
 
