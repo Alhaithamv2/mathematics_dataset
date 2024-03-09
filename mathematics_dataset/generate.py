@@ -106,9 +106,9 @@ def init_modules(train_split=False):
   all_modules['extrapolate'] = modules.test_extra()
 
   counts['train'] = FLAGS.per_train_module
-  counts['train-easy'] = FLAGS.per_train_module // 3
-  counts['train-medium'] = FLAGS.per_train_module // 3
-  counts['train-hard'] = FLAGS.per_train_module // 3
+  counts['train-easy'] = FLAGS.per_train_module
+  #counts['train-medium'] = FLAGS.per_train_module // 3
+  #counts['train-hard'] = FLAGS.per_train_module // 3
   counts['interpolate'] = FLAGS.per_test_module
   counts['extrapolate'] = FLAGS.per_test_module
 
